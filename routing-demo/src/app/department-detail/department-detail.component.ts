@@ -42,7 +42,9 @@ export class DepartmentDetailComponent {
 
   gotoDepartments(){
     let selectedId = this.departmentId ? this.departmentId : null;
-    this.router.navigate(['/departments', {id: selectedId, test: "testValue"}]);
+    console.log(this.departmentId);
+    //this.router.navigate(['/departments', {id: selectedId, test: "testValue"}]);
+    this.router.navigate(['../', {id: selectedId}], {relativeTo:this.route});
   }
 
 
