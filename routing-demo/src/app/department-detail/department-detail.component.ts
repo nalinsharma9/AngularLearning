@@ -32,12 +32,12 @@ export class DepartmentDetailComponent {
 
   goPrevious(){
     let previousId = this.departmentId - 1;
-    this.router.navigate(['/departments',previousId]);
+    this.router.navigate(['/department-list',previousId]);
   }
 
   goNext(){
     let nextId = this.departmentId + 1;
-    this.router.navigate(['/departments',nextId]);
+    this.router.navigate(['/department-list',nextId]);
   }
 
   gotoDepartments(){
