@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IEmployee } from './employee';
 import { Observable } from 'rxjs';
-import { throwError } from 'rxjs';
+import { throwError as observableThrowError } from 'rxjs';
 import { catchError } from 'rxjs';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class EmployeeService {
   }
 
   errorHandler(error: HttpErrorResponse){
-    return throwError(error.message || "Server Error");
+    return observableThrowError(error.message || "Server Error");
     
 
   }
